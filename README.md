@@ -4,7 +4,7 @@ Official signed Android releases and security reports for Biofects Butler, a com
 
 ## Download
 
-Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the Free Android APK. Paid beta builds are delivered privately after a PayPal invoice is paid and are never published in this repository.
+Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the Free Android APK. The Paid edition is coming soon and is not currently available. Paid builds are never published in this repository.
 
 ## Verify before installing
 
