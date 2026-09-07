@@ -1,0 +1,59 @@
+name: Scan release APK
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing release tag to scan
+        required: true
+        default: v0.1.0-beta.10-direct
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  virustotal:
+    name: VirusTotal
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+      RELEASE_TAG: ${{ github.event.release.tag_name || inputs.release_tag }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require VirusTotal API key
+        run: |
+          if [[ -z "$VIRUSTOTAL_API_KEY" ]]; then
+            echo "Add VIRUSTOTAL_API_KEY as a repository Actions secret." >&2
+            exit 1
+          fi
+      - name: Download release APK
+        run: |
+          mkdir -p scan
+          gh release download "$RELEASE_TAG" --pattern '*.apk' --dir scan
+          mapfile -t apks < <(find scan -maxdepth 1 -type f -name '*.apk')
+          if (( ${#apks[@]} != 1 )); then
+            echo "Expected exactly one public APK, found ${#apks[@]}." >&2
+            exit 1
+          fi
+          printf 'APK=%s\n' "${apks[0]}" >> "$GITHUB_ENV"
+      - name: Scan APK
+        id: scan
+        continue-on-error: true
+        run: |
+          tools/scan-virustotal.sh "$APK" scan/VIRUSTOTAL-REPORT.md scan/VIRUSTOTAL-REPORT.json
+      - name: Publish scan reports
+        if: always() && hashFiles('scan/VIRUSTOTAL-REPORT.md') != ''
+        run: |
+          gh release upload "$RELEASE_TAG" --clobber \
+            scan/VIRUSTOTAL-REPORT.md \
+            scan/VIRUSTOTAL-REPORT.json
+      - name: Enforce scan result
+        if: steps.scan.outcome != 'success'
+        run: |
+          echo "VirusTotal scan failed or reported a detection. Review the published report when available." >&2
+          exit 1

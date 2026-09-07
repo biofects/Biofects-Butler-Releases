@@ -30,6 +30,8 @@ apksigner verify --verbose --print-certs Biofects-Butler-Free-*.apk
 
 Security scanning reduces risk but does not guarantee that an application is secure. Download only from this repository or [biofects.com](https://biofects.com/butler/), verify the artifact, and keep Android and Home Assistant updated.
 
+Release APKs are submitted to VirusTotal by the public [Scan release APK workflow](https://github.com/biofects/Biofects-Butler-Releases/actions/workflows/scan-release.yml). Its Markdown and JSON results are attached to the corresponding release. A release report clearly says when the VirusTotal scan is still pending.
+
 ## Support
 
 See [biofects.com/support](https://biofects.com/support/) or email support@biofects.com.
