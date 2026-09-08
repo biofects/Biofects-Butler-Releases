@@ -38,4 +38,4 @@ Release APKs are submitted to VirusTotal by the public [Scan release APK workflo
 
 ## Support
 
-See [biofects.com/support](https://biofects.com/support/) or email support@biofects.com.
+Use the support form at [biofects.com/support](https://biofects.com/support/).
