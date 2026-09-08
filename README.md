@@ -8,7 +8,7 @@ Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/re
 
 Beta.13 requires version `0.1.0-beta.13` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.13). It adds selectable weather providers and forecast types, a full forecast popup, and greetings based on Home Assistant's timezone. Update the integration and restart Home Assistant before connecting the app.
 
-Compatible UniFi Connect displays that permit APK sideloading can use the [UniFi Connect Free compatibility beta](https://github.com/biofects/Biofects-Butler-Releases/releases/tag/v0.1.0-beta.13-unifi). Physical Connect hardware validation is still pending, and Google Mobile Ads may be unavailable on restricted firmware.
+Compatible UniFi Connect displays that run Android 8.0 or newer and permit APK sideloading use the same standard Free APK. UniFi Connect is a supported device category, not a separate Butler edition or release. Physical compatibility can vary by model and firmware, and Google Mobile Ads may be unavailable on restricted firmware.
 
 The Paid editions are coming soon and are not currently available. Paid builds are never published in this repository.
 
