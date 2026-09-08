@@ -4,7 +4,11 @@ Official signed Android releases and security reports for Biofects Butler, a com
 
 ## Download
 
-Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the Free Android APK. The Paid edition is coming soon and is not currently available. Paid builds are never published in this repository.
+Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the standard Free Android APK.
+
+Compatible UniFi Connect displays that permit APK sideloading can use the [UniFi Connect Free compatibility beta](https://github.com/biofects/Biofects-Butler-Releases/releases/tag/v0.1.0-beta.10-unifi). Physical Connect hardware validation is still pending, and Google Mobile Ads may be unavailable on restricted firmware.
+
+The Paid editions are coming soon and are not currently available. Paid builds are never published in this repository.
 
 ## Verify before installing
 
