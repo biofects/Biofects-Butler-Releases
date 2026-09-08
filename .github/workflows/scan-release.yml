@@ -9,7 +9,7 @@ on:
       release_tag:
         description: Existing release tag to scan
         required: true
-        default: v0.1.0-beta.10-direct
+        default: v0.1.0-beta.11-direct
         type: string
 
 permissions:
