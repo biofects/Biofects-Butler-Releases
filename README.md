@@ -6,7 +6,7 @@ Official signed Android releases and security reports for Biofects Butler, a com
 
 Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the standard Free Android APK.
 
-Beta.14 requires version `0.1.0-beta.13` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.13). It adds an in-app Upgrade action and calendar month navigation. Install a newer APK over the existing same-edition app to preserve Home Assistant authorization; do not uninstall first.
+Beta.15 requires version `0.1.0-beta.13` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.13). It displays entity timestamps in Home Assistant's timezone with a 12-hour clock. Install a newer APK over the existing same-edition app to preserve Home Assistant authorization; do not uninstall first.
 
 Compatible UniFi Connect displays that run Android 8.0 or newer and permit APK sideloading use the same standard Free APK. UniFi Connect is a supported device category, not a separate Butler edition or release. Physical compatibility can vary by model and firmware, and Google Mobile Ads may be unavailable on restricted firmware.
 
