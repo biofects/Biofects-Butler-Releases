@@ -6,7 +6,7 @@ Official signed Android releases and security reports for Biofects Butler, a com
 
 Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the standard Free Android APK.
 
-Beta.17 requires version `0.1.0-beta.17` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.17). It adds Robot Butler as an optional third theme alongside Butler Neon and Holographic Interface. The robot turns its head while listening and speaking, uses white listening eyes, and adds a voice-reactive speaking glow without moving the body. Install a newer APK over the existing same-edition app to preserve Home Assistant authorization; do not uninstall first.
+Beta.19 requires version `0.1.0-beta.22` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.22). It adds a Full Page dashboard layout, scrollable panels, compact greeting weather, and richer entity controls with current weather details and forecasts. Butler Neon and Holographic Interface are the two supported themes. Install a newer APK over the existing same-edition app to preserve Home Assistant authorization; do not uninstall first.
 
 Compatible UniFi Connect displays that run Android 8.0 or newer and permit APK sideloading use the same standard Free APK. UniFi Connect is a supported device category, not a separate Butler edition or release. Physical compatibility can vary by model and firmware, and Google Mobile Ads may be unavailable on restricted firmware.
 
