@@ -6,7 +6,7 @@ Official signed Android releases and security reports for Biofects Butler, a com
 
 Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the standard Free Android APK.
 
-Beta.22 requires version `0.1.0-beta.24` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.24). It adds a native Cookbook with recipe search, a responsive result grid, and recipe details with a larger side image beside the ingredients. Butler Neon and Holographic Interface are the two supported themes. Install a newer APK over the existing same-edition app to preserve Home Assistant authorization; do not uninstall first.
+Beta.23 requires version `0.1.0-beta.26` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.26). It adds per-screen text scaling for cards, dialogs, headers, labels, buttons, and other native dashboard content. Butler Neon and Holographic Interface are the two supported themes. Install a newer APK over the existing same-edition app to preserve Home Assistant authorization; do not uninstall first.
 
 Compatible UniFi Connect displays that run Android 8.0 or newer and permit APK sideloading use the same standard Free APK. UniFi Connect is a supported device category, not a separate Butler edition or release. Physical compatibility can vary by model and firmware, and Google Mobile Ads may be unavailable on restricted firmware.
 
