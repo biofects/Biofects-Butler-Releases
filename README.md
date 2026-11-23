@@ -1,25 +1,24 @@
 # Biofects Butler Releases
 
-Official signed Android releases and security reports for Biofects Butler, a companion HUD for an existing Home Assistant installation. Butler is not a standalone smart-home app.
+Biofects Butler is an Android dashboard and voice companion for Home Assistant. Download the signed APK from the latest release. Each release lists its minimum Home Assistant integration version. [Android downloads](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) · [Home Assistant integration](https://github.com/biofects/Biofects-Butler)
 
-## Download
+## Install or update
 
-Use the [latest release](https://github.com/biofects/Biofects-Butler-Releases/releases/latest) to download the standard Free Android APK.
+1. Install the Biofects Butler integration through HACS or its release ZIP. Integration 1.0.0 is the recommended pairing for Android 1.0.0.
+2. Download the signed APK and verify it using the instructions below. Enable installation from the source you use to open the APK on your device.
+3. Install the APK, open Butler, and connect to Home Assistant.
 
-Beta.23 requires version `0.1.0-beta.26` or newer of the [Biofects Butler Home Assistant integration](https://github.com/biofects/Biofects-Butler/releases/tag/v0.1.0-beta.26). It adds per-screen text scaling for cards, dialogs, headers, labels, buttons, and other native dashboard content. Butler Neon and Holographic Interface are the two supported themes. Install a newer APK over the existing same-edition app to preserve Home Assistant authorization; do not uninstall first.
+Android phones, tablets, Echo Show, and compatible UniFi Connect displays use the same APK if their firmware supports Android 8.0 or later and allows sideloading. Ad availability depends on device firmware and Google services.
 
-Compatible UniFi Connect displays that run Android 8.0 or newer and permit APK sideloading use the same standard Free APK. UniFi Connect is a supported device category, not a separate Butler edition or release. Physical compatibility can vary by model and firmware, and Google Mobile Ads may be unavailable on restricted firmware.
+On devices with the existing public `com.biofects.butler` app, install the newer signed APK over the current app to retain Home Assistant authorization. If you are moving from Companion Preview, sign in to Home Assistant once from the unified app. Older downloads retain their original filenames and release notes.
 
-The Paid editions are coming soon and are not currently available. Paid builds are never published in this repository.
+## Settings
+
+After connecting, open **Settings** for the optional PayPal donation link. A labeled ad can appear below the Settings header. **Piper Voice** lists voices exposed by Home Assistant when Piper is configured in the preferred Assist pipeline. Each display can select a voice or use the Home Assistant default.
 
 ## Verify before installing
 
-Every public release includes:
-
-- `SHA256SUMS` for file-integrity verification
-- `APK-SIGNATURE.txt` with the signing-certificate identity
-- `APK-PERMISSIONS.txt` with the merged manifest permissions
-- `SECURITY-REPORT.md` with build, test, lint, and scanner status
+Public releases include `SHA256SUMS`, the certificate report `APK-SIGNATURE.txt`, the permissions report `APK-PERMISSIONS.txt`, and `SECURITY-REPORT.md` with build, test, lint, and scanner status.
 
 The expected direct-release certificate SHA-256 is:
 
@@ -27,17 +26,15 @@ The expected direct-release certificate SHA-256 is:
 6e96ab6b06627371fda1429f90e0792cd88a28311036f3bc8a3aa67a5554d37f
 ```
 
-On Linux, verify a downloaded APK from the release directory with:
+Run from the directory containing the downloaded APK and checksum file:
 
 ```bash
 sha256sum --check SHA256SUMS
-apksigner verify --verbose --print-certs Biofects-Butler-Free-*.apk
+apksigner verify --verbose --print-certs Biofects-Butler-*.apk
 ```
 
-Security scanning reduces risk but does not guarantee that an application is secure. Download only from this repository or [biofects.com](https://biofects.com/butler/), verify the artifact, and keep Android and Home Assistant updated.
-
-Release APKs are submitted to VirusTotal by the public [Scan release APK workflow](https://github.com/biofects/Biofects-Butler-Releases/actions/workflows/scan-release.yml). Its Markdown and JSON results are attached to the corresponding release. A release report clearly says when the VirusTotal scan is still pending.
+Compare the certificate SHA-256 in the output with the fingerprint above. The scan release APK workflow attaches VirusTotal reports to the release. The security report identifies pending scans. [Scan workflow](https://github.com/biofects/Biofects-Butler-Releases/actions/workflows/scan-release.yml)
 
 ## Support
 
-Use the support form at [biofects.com/support](https://biofects.com/support/).
+[Biofects Support](https://biofects.com/support/) · [Privacy policy](https://biofects.com/privacy/)
