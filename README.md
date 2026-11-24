@@ -6,7 +6,7 @@ Biofects Butler is an Android dashboard and voice companion for Home Assistant. 
 
 1. Install the Biofects Butler integration through HACS or its release ZIP. Integration 1.0.0 is the recommended pairing for Android 1.0.0.
 2. Download the signed APK and verify it using the instructions below. Enable installation from the source you use to open the APK on your device.
-3. Install the APK, open Butler, and connect to Home Assistant.
+3. Install the APK, open Butler, and connect to Home Assistant. Remote addresses require HTTPS. To use local HTTP, enter the full HTTP address and approve the warning.
 
 Android phones, tablets, Echo Show, and compatible UniFi Connect displays use the same APK if their firmware supports Android 8.0 or later and allows sideloading. Ad availability depends on device firmware and Google services.
 
@@ -14,7 +14,7 @@ On devices with the existing public `com.biofects.butler` app, install the newer
 
 ## Settings
 
-After connecting, open **Settings** for the optional PayPal donation link. A labeled ad can appear below the Settings header. **Piper Voice** lists voices exposed by Home Assistant when Piper is configured in the preferred Assist pipeline. Each display can select a voice or use the Home Assistant default.
+After connecting, open **Settings** for the optional PayPal donation link. A labeled ad can appear at the top of Settings. **Assist Profile** lets each display choose a Home Assistant pipeline with its own conversation agent, prompt, and voice. **Home Assistant default** follows the preferred pipeline and offers a Piper override when available.
 
 ## Verify before installing
 
@@ -33,7 +33,7 @@ sha256sum --check SHA256SUMS
 apksigner verify --verbose --print-certs Biofects-Butler-*.apk
 ```
 
-Compare the certificate SHA-256 in the output with the fingerprint above. The scan release APK workflow attaches VirusTotal reports to the release. The security report identifies pending scans. [Scan workflow](https://github.com/biofects/Biofects-Butler-Releases/actions/workflows/scan-release.yml)
+Compare the certificate SHA-256 in the output with the fingerprint above. The security report lists the checks run for the published APK. The optional VirusTotal workflow requires an API key. [Scan workflow](https://github.com/biofects/Biofects-Butler-Releases/actions/workflows/scan-release.yml)
 
 ## Support
 
